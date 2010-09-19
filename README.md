@@ -93,4 +93,4 @@ The track object has the following attributes:
 
 ## Author
 
-Author: Andrea Franz - [http://gravityblast.com](http://gravityblast.com "Andrea Franz")
+Andrea Franz - [http://gravityblast.com](http://gravityblast.com "Andrea Franz")
