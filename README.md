@@ -88,7 +88,7 @@ The track object has the following attributes:
 ## Links
 
 * Repository: git://github.com/pilu/musix_match.git
-* MusixMatch: [musixmatch.com](http://musixmatch.com, "MusixMatch")
+* MusixMatch: [musixmatch.com](http://musixmatch.com "MusixMatch")
 * MusixMatch API: [developer.musixmatch.com](http://developer.musixmatch.com "MusixMatch API")
 
 ## Author
