@@ -1,16 +1,16 @@
 # Musix Match
 
-     _
-    | |       _
-    | |      | |
-    | | _  _ | |
-    | || || || |  MusixMatch is wrapper for the musixmatch.com API's.
-    | || || || |  With this library you can search for lyrics and tracks
-    | |  || || |  using the musixmatch.com service.
-    |          |
-    |          |
-    \          /
-     ----------     
+     _                                                                              _
+    | |       _                                                            _       | |
+    | |      | |                                                          | |      | |
+    | | _  _ | |                                                          | | _  _ | |
+    | || || || |    MusixMatch is wrapper for the musixmatch.com API's.   | || || || |
+    | || || || |  With this library you can search for lyrics and tracks  | || || || |
+    | |  || || |             using the musixmatch.com service.            | |  || || |
+    |          |                                                          |          |
+    |          |                                                          |          |
+    \          /                                                          \          /
+     ----------                                                            ----------
  
 ## Installation
 
