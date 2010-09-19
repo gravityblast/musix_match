@@ -1,6 +1,12 @@
-require 'json'
-require 'httparty'
 require 'uri'
+
+gem_libs = %w(json httparty)
+begin
+  gem_libs.each{|lib| require lib}
+rescue LoadError
+  require 'rubygems'
+  gem_libs.each{|lib| require lib}
+end
 
 musix_match_path = File.dirname(__FILE__)
 

@@ -11,7 +11,7 @@ module MusixMatch
       @track_list.each do |lyrics|
         yield lyrics
       end
-    end 
+    end
   
   protected
     
