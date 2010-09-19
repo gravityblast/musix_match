@@ -1,16 +1,16 @@
 # Musix Match
 
- _
-| |       _
-| |      | |
-| | _  _ | |
-| || || || |  MusixMatch is wrapper for the [musixmatch.com](http://musixmatch.com, MusixMatch) API's.
-| || || || |  With this library you can search for lyrics and tracks
-| |  || || |  using the [musixmatch.com](http://musixmatch.com "MusixMatch") service.
-|          |
-|          |  Author: Andrea Franz [gravityblast.com](http://gravityblast.com)
-\          /
- ----------
+     _
+    | |       _
+    | |      | |
+    | | _  _ | |
+    | || || || |  MusixMatch is wrapper for the musixmatch.com API's.
+    | || || || |  With this library you can search for lyrics and tracks
+    | |  || || |  using the musixmatch.com service.
+    |          |
+    |          |
+    \          /
+     ----------     
  
 ## Installation
 
@@ -85,3 +85,12 @@ The track object has the following attributes:
 * artist_mbid
 * artist_name
 
+## Links
+
+* Repository: git://github.com/pilu/musix_match.git
+* MusixMatch: [musixmatch.com](http://musixmatch.com, "MusixMatch")
+* MusixMatch API: [developer.musixmatch.com](http://developer.musixmatch.com "MusixMatch API")
+
+## Author
+
+Author: Andrea Franz - [http://gravityblast.com](http://gravityblast.com "Andrea Franz")
