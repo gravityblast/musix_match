@@ -17,9 +17,11 @@ begin
     gemspec.email = "andrea@gravityblast.com"
     gemspec.homepage = "http://github.com/pilu/musix_match"
     gemspec.authors = ["Andrea Franz"]
-    gemspec.files = FileList['lib/**/*', 'spec/**/*']
+    gemspec.files = FileList['LICENSE', 'README.rdoc', 'Rakefile', 'lib/**/*.rb', 'spec/**/*.rb']
     gemspec.add_dependency('json')
     gemspec.add_dependency('httparty', '>= 0.6.1')
+    gemspec.extra_rdoc_files = ['README.rdoc', 'LICENSE']
+    gemspec.rdoc_options = ['--main=README.rdoc', '--charset=UTF-8']
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: gem install jeweler"

@@ -9,14 +9,18 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
-  s.date = %q{2010-09-19}
+  s.date = %q{2010-09-20}
   s.description = %q{API wrapper for musixmatch.com API's}
   s.email = %q{andrea@gravityblast.com}
   s.extra_rdoc_files = [
-    "LICENSE"
+    "LICENSE",
+     "README.rdoc"
   ]
   s.files = [
-    "lib/musix_match.rb",
+    "LICENSE",
+     "README.rdoc",
+     "Rakefile",
+     "lib/musix_match.rb",
      "lib/musix_match/api/base.rb",
      "lib/musix_match/api/finder.rb",
      "lib/musix_match/api/search.rb",
@@ -35,7 +39,7 @@ Gem::Specification.new do |s|
      "spec/track_spec.rb"
   ]
   s.homepage = %q{http://github.com/pilu/musix_match}
-  s.rdoc_options = ["--charset=UTF-8"]
+  s.rdoc_options = ["--main=README.rdoc", "--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{API wrapper for musixmatch.com API's}
