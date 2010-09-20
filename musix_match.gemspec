@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{musix_match}
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
      "lib/musix_match/models/track.rb",
      "lib/musix_match/track_find_result.rb",
      "lib/musix_match/track_search_result.rb",
+     "spec/base_model_spec.rb",
      "spec/finder_spec.rb",
      "spec/lyrics_spec.rb",
      "spec/musix_match_spec.rb",
@@ -44,7 +45,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{API wrapper for musixmatch.com API's}
   s.test_files = [
-    "spec/finder_spec.rb",
+    "spec/base_model_spec.rb",
+     "spec/finder_spec.rb",
      "spec/lyrics_spec.rb",
      "spec/musix_match_spec.rb",
      "spec/search_spec.rb",
