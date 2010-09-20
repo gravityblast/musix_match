@@ -1,6 +1,6 @@
 module MusixMatch
   class LyricsSearchResult    
-    attr_reader :status_code, :execute_time, :available
+    attr_reader :status_code, :execute_time, :available, :lyrics_list
     
     def initialize(response)
       @lyrics_list = []
