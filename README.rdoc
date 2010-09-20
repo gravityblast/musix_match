@@ -36,7 +36,6 @@ Available options for the search_lyrics methods are:
 * q: string to be searched in every data field
 * q_track: string to be searched among tracks titles
 * q_artist: string to be searched among artists names
-* format: desired output format
 * page: requested page of results
 * page_size: desired number of items per result page
     
@@ -55,6 +54,15 @@ Available options for the search_lyrics methods are:
       puts "#{track.track_id}: #{track.track_name} (#{track.artist_name})"
     end
   end
+  
+Available options for the search_track methods are:
+
+* q: a string that will be searched in every data field
+* q_track: string to be searched among tracks titles
+* q_artist: string to be searched among artists names
+* page: requested page of results
+* page_size: desired number of items per result page
+* f_has_lyrics: exclude tracks without an available lyrics
     
 === Getting track
 
