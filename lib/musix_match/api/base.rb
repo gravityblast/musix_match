@@ -1,5 +1,6 @@
 module MusixMatch
   module API
+    class AuthenticationFailedException < Exception; end
     class APIKeyNotSpecifiedException < Exception; end
     
     class Base
@@ -23,13 +24,15 @@ module MusixMatch
 
       def self.get(method, params={})
         raise APIKeyNotSpecifiedException.new('You must specify the API key. MusixMatch::API::Base.api_key = "YOUR_API_KEY"') if api_key.nil?
-        response = HTTParty.get(url_for(method, params))
-        case response.parsed_response
+        response = HTTParty.get(url_for(method, params))        
+        parsed_response = case response.parsed_response
         when Hash
           response.parsed_response
         when String
           JSON.parse(response.parsed_response)
         end
+        raise AuthenticationFailedException.new('Authentication failed, probably because of a bad API key') if parsed_response['message']['header']['status_code'] == 401
+        parsed_response
       end
     
       def api_key    
