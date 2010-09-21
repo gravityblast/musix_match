@@ -24,7 +24,7 @@ module MusixMatch
 
       def self.get(method, params={})
         raise APIKeyNotSpecifiedException.new('You must specify the API key. MusixMatch::API::Base.api_key = "YOUR_API_KEY"') if api_key.nil?
-        response = HTTParty.get(url_for(method, params))        
+        response = HTTParty.get(url_for(method, params))
         parsed_response = case response.parsed_response
         when Hash
           response.parsed_response
