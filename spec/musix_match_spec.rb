@@ -24,4 +24,15 @@ describe 'MusixMatch' do
     MusixMatch::Models::Track.should_receive(:search).with(params)
     MusixMatch.search_track(params)
   end
+  
+  it "should call search on InstantLyrics::Search" do
+    q = 'artist name track name'
+    result = mock(MusixMatch::InstantLyrics::Result)
+    lyrics = mock(MusixMatch::Models::Lyrics)
+    lyrics.should_receive(:lyrics_body).and_return('lyrics body')
+    result.should_receive(:found?).and_return(true)
+    result.should_receive(:lyrics).and_return(lyrics)
+    MusixMatch::InstantLyrics::Search.should_receive(:search).with(q).and_return(result)
+    MusixMatch.i_m_feeling_lucky(q)
+  end
 end
