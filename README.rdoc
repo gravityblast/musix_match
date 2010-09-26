@@ -71,6 +71,10 @@ Available options for the search_track methods are:
     puts "#{track.track_name} (#{track.artist_name})"
     puts "Lyrics id: #{track.lyrics_id}"
   end
+
+=== Are you feeling lucky?
+
+  puts MusixMatch.i_m_feeling_lucky("Guns'n'Roses - Welcome to the jungle")
     
 == Lyrics
 
