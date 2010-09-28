@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'LyricsFindResult' do
+describe MusixMatch::LyricsFindResult do
   it 'should set status_code' do
     response = load_fixture('lyrics.get')
     result = MusixMatch::LyricsFindResult.new(response)

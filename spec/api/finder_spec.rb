@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Finder' do
+describe MusixMatch::API::Finder do
   
   lyrics_find_response  = {'message' => {'body' => {'lyrics_list' => [{'lyrics' => {}}]}, 'header' => { 'status_code' => 200, 'execute_time' => 1 }}}
   track_find_response   = {'message' => {'body' => {'track_list'  => [{'track' => {}}] }, 'header' => { 'status_code' => 200, 'execute_time' => 1 }}}

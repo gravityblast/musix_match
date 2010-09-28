@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Search' do
+describe MusixMatch::API::Search do
   
   lyrics_search_response  = {'message' => {'body' => {'lyrics_list' => []}, 'header' => { 'status_code' => 200, 'execute_time' => 1, 'available' => 10 }}}
   track_search_response   = {'message' => {'body' => {'track_list' => [] }, 'header' => { 'status_code' => 200, 'execute_time' => 1, 'available' => 10 }}}

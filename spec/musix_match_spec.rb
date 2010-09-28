@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'MusixMatch' do
+describe MusixMatch do
   it "should call get on Lyrics" do
     lyrics_id = 1
     MusixMatch::Models::Lyrics.should_receive(:get).with(lyrics_id)

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Lyrics' do
+describe MusixMatch::Models::Lyrics do
   it 'should call search_lyrics on Search class' do
     params = { :q_artist => 'artist name' }
     MusixMatch::API::Search.should_receive(:search_lyrics).with(params)
