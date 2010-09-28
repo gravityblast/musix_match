@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{musix_match}
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
-  s.date = %q{2010-09-26}
+  s.date = %q{2010-09-28}
   s.description = %q{API wrapper for musixmatch.com API's}
   s.email = %q{andrea@gravityblast.com}
   s.extra_rdoc_files = [
@@ -32,13 +32,15 @@ Gem::Specification.new do |s|
      "lib/musix_match/models/track.rb",
      "lib/musix_match/track_find_result.rb",
      "lib/musix_match/track_search_result.rb",
-     "spec/api_base_spec.rb",
-     "spec/finder_spec.rb",
-     "spec/lyrics_spec.rb",
+     "spec/api/base_spec.rb",
+     "spec/api/finder_spec.rb",
+     "spec/api/search_spec.rb",
+     "spec/lyrics_find_result_spec.rb",
+     "spec/models/lyrics_spec.rb",
+     "spec/models/track_spec.rb",
      "spec/musix_match_spec.rb",
-     "spec/search_spec.rb",
      "spec/spec_helper.rb",
-     "spec/track_spec.rb"
+     "spec/track_find_result_spec.rb"
   ]
   s.homepage = %q{http://github.com/pilu/musix_match}
   s.rdoc_options = ["--main=README.rdoc", "--charset=UTF-8"]
@@ -46,13 +48,15 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{API wrapper for musixmatch.com API's}
   s.test_files = [
-    "spec/api_base_spec.rb",
-     "spec/finder_spec.rb",
-     "spec/lyrics_spec.rb",
+    "spec/api/base_spec.rb",
+     "spec/api/finder_spec.rb",
+     "spec/api/search_spec.rb",
+     "spec/lyrics_find_result_spec.rb",
+     "spec/models/lyrics_spec.rb",
+     "spec/models/track_spec.rb",
      "spec/musix_match_spec.rb",
-     "spec/search_spec.rb",
      "spec/spec_helper.rb",
-     "spec/track_spec.rb"
+     "spec/track_find_result_spec.rb"
   ]
 
   if s.respond_to? :specification_version then
