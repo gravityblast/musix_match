@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe 'Finder' do
   
-  lyrics_find_response  = {'message' => {'body' => {'lyrics_list' => {'lyrics' => {}}}, 'header' => { 'status_code' => 200, 'execute_time' => 1 }}}
-  track_find_response   = {'message' => {'body' => {'track_list' => {'track' => {}} }, 'header' => { 'status_code' => 200, 'execute_time' => 1 }}}
+  lyrics_find_response  = {'message' => {'body' => {'lyrics_list' => [{'lyrics' => {}}]}, 'header' => { 'status_code' => 200, 'execute_time' => 1 }}}
+  track_find_response   = {'message' => {'body' => {'track_list'  => [{'track' => {}}] }, 'header' => { 'status_code' => 200, 'execute_time' => 1 }}}
   
   it "should initialize a new Finder object and call find_lyrics" do
     finder = mock(MusixMatch::API::Finder)

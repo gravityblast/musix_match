@@ -1,5 +1,5 @@
 module MusixMatch
-  class LyricsFindResult    
+  class LyricsFindResult
     attr_reader :status_code, :execute_time, :lyrics
     
     def initialize(response)
@@ -20,8 +20,8 @@ module MusixMatch
     end  
   
     def parse_response_body(response)
-      if status_code == 200
-        @lyrics = Models::Lyrics.new(response['message']['body']['lyrics_list']['lyrics'])
+      if status_code == 200        
+        @lyrics = Models::Lyrics.new(response['message']['body']['lyrics_list'].first['lyrics'])
       end
     end
   end

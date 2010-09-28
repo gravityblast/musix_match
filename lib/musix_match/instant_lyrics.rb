@@ -18,14 +18,14 @@ module MusixMatch
       end
 
       def start
-        lyrics_id = search_lyrics
+        lyrics_id = search_track
         lyrics    = find_lyrics(lyrics_id) if lyrics_id
         Result.new(lyrics)
       end
 
-      def search_lyrics
-        result = MusixMatch.search_lyrics(:q => @q)
-        if result.status_code == 200 && lyrics = result.lyrics_list.first      
+      def search_track
+        result = MusixMatch.search_track(:q => @q, :f_has_lyrics => 1)
+        if result.status_code == 200 && lyrics = result.track_list.first
           lyrics.lyrics_id
         end
       end

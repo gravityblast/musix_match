@@ -1,0 +1,14 @@
+{
+  "message":{
+    "header":{
+      "status_code":200,
+      "execute_time":0.025208044052},
+    "body":
+      {"lyrics_list":[{
+        "lyrics":{
+          "lyrics_id":123,
+          "lyrics_body":"Dear mother, can you hear me?..."}
+      }]
+    }
+  }
+}
