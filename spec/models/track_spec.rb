@@ -13,6 +13,12 @@ describe MusixMatch::Models::Track do
     MusixMatch::Models::Track.get(track_id)
   end
   
+  it "should call get_chart on TrackChart" do
+    params = { :country => 'it' }
+    MusixMatch::API::TrackChart.should_receive(:get_chart).with(params)
+    MusixMatch::Models::Track.get_chart(params)
+  end
+  
   context 'when created' do
     it 'should have the search class method' do
       MusixMatch::Models::Track.should respond_to(:search)

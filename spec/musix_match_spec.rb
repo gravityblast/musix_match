@@ -25,6 +25,12 @@ describe MusixMatch do
     MusixMatch.search_track(params)
   end
   
+  it "should call get_chart on Track" do
+    params = { :country => 'it' }
+    MusixMatch::Models::Track.should_receive(:get_chart).with(params)
+    MusixMatch.get_track_chart(params)
+  end
+  
   it "should call search on InstantLyrics::Search" do
     q = 'artist name track name'
     result = mock(MusixMatch::InstantLyrics::Result)

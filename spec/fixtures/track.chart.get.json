@@ -1,0 +1,44 @@
+{
+    "message": {
+        "header": {
+            "status_code": 200,
+            "execute_time": 0.137812137604
+        },
+        "body": {
+            "track_list": [{
+                "track": {
+                    "track_id": 9113737,
+                    "track_mbid": "a426ebab-2000-4e1b-9e4c-bcbe62f69bb4",
+                    "lyrics_id": 4261721,
+                    "track_name": "Alejandro",
+                    "artist_id": 378462,
+                    "artist_mbid": "650e7db6-b795-4eb5-a702-5ea2fc46c848",
+                    "artist_name": "Lady Gaga"
+                }
+            },
+            {
+                "track": {
+                    "track_id": 8241603,
+                    "track_mbid": "bf905182-12f5-44b8-8682-d0e11ca527e1",
+                    "lyrics_id": 5368250,
+                    "track_name": "Cry Cry",
+                    "artist_id": 373202,
+                    "artist_mbid": "7fcb104f-8b7e-4852-a8a8-928dc5c5a29b",
+                    "artist_name": "Oceana"
+                }
+            },
+            {
+                "track": {
+                    "track_id": 11328977,
+                    "track_mbid": "63ca1c43-9ba9-43b3-8772-950dac6b4713",
+                    "lyrics_id": 4271086,
+                    "track_name": "Club Can't Handle Me (feat. David Guetta)",
+                    "artist_id": 312472,
+                    "artist_mbid": "4593d49a-7f67-46ba-9ec0-126bd676286f",
+                    "artist_name": "Flo Rida"
+                }
+            }
+            ]
+        }
+    }
+}

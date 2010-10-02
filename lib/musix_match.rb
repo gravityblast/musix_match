@@ -19,6 +19,7 @@ musix_match_path = File.dirname(__FILE__)
 'lyrics_find_result',
 'track_find_result',
 'api/finder',
+'api/track_chart',
 'models/track',
 'instant_lyrics'].each do |lib|
   require musix_match_path + '/musix_match/' + lib
@@ -41,8 +42,12 @@ module MusixMatch
     Models::Track.search(*args)
   end
   
+  def self.get_track_chart(*args)
+    Models::Track.get_chart(*args)
+  end
+  
   def self.i_m_feeling_lucky(q)
     result = MusixMatch::InstantLyrics::Search.search(q)
     result.found? ? result.lyrics.lyrics_body : 'Lyrics not found'
-  end
+  end    
 end
