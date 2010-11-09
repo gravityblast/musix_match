@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{musix_match}
-  s.version = "0.1.5"
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
-  s.date = %q{2010-10-02}
+  s.date = %q{2010-11-09}
   s.description = %q{API wrapper for musixmatch.com API's}
   s.email = %q{andrea@gravityblast.com}
   s.extra_rdoc_files = [
@@ -30,6 +30,7 @@ Gem::Specification.new do |s|
      "lib/musix_match/lyrics_search_result.rb",
      "lib/musix_match/models/lyrics.rb",
      "lib/musix_match/models/model.rb",
+     "lib/musix_match/models/subtitle.rb",
      "lib/musix_match/models/track.rb",
      "lib/musix_match/track_find_result.rb",
      "lib/musix_match/track_search_result.rb",
