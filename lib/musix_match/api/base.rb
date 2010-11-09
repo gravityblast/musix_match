@@ -4,7 +4,7 @@ module MusixMatch
     class APIKeyNotSpecifiedException < Exception; end
     
     class Base
-      API_URL = 'http://api.musixmatch.com/ws/1.0'
+      API_URL = 'http://api.musixmatch.com/ws/1.1'
     
       def self.api_key=(value)
         @@api_key = value        
