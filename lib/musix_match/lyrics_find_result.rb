@@ -21,7 +21,7 @@ module MusixMatch
   
     def parse_response_body(response)
       if status_code == 200        
-        @lyrics = Models::Lyrics.new(response['message']['body']['lyrics_list'].first['lyrics'])
+        @lyrics = Models::Lyrics.new(response['message']['body']['lyrics'])
       end
     end
   end

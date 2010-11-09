@@ -15,7 +15,7 @@ describe MusixMatch::LyricsFindResult do
   
   it 'should initialize a new lyrics with the first lyrics of lyrics_list' do
     response = load_fixture('lyrics.get')
-    MusixMatch::Models::Lyrics.should_receive(:new).with(response['message']['body']['lyrics_list'].first['lyrics'])
+    MusixMatch::Models::Lyrics.should_receive(:new).with(response['message']['body']['lyrics'])
     MusixMatch::LyricsFindResult.new(response)
   end
 end

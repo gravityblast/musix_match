@@ -4,11 +4,13 @@
       "status_code":200,
       "execute_time":0.025208044052},
     "body":
-      {"lyrics_list":[{
+      {
         "lyrics":{
           "lyrics_id":123,
-          "lyrics_body":"Dear mother, can you hear me?..."}
-      }]
+          "lyrics_body":"Dear mother, can you hear me?...",
+          "lyrics_language":"en",
+          "script_tracking_url": "http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"
+      }
     }
   }
 }
