@@ -15,7 +15,7 @@ describe MusixMatch::TrackFindResult do
   
   it 'should initialize a new track with the first track of track_list' do
     response = load_fixture('track.get')
-    MusixMatch::Models::Track.should_receive(:new).with(response['message']['body']['track_list'].first['track'])
+    MusixMatch::Models::Track.should_receive(:new).with(response['message']['body']['track'])
     MusixMatch::TrackFindResult.new(response)
   end
 end

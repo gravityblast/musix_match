@@ -21,7 +21,7 @@ module MusixMatch
   
     def parse_response_body(response)
       if status_code == 200
-        @track = Models::Track.new(response['message']['body']['track_list'].first['track'])
+        @track = Models::Track.new(response['message']['body']['track'])
       end
     end
   end
