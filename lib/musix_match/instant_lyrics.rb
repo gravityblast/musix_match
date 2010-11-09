@@ -18,20 +18,20 @@ module MusixMatch
       end
 
       def start
-        lyrics_id = search_track
-        lyrics    = find_lyrics(lyrics_id) if lyrics_id
+        track_id = search_track
+        lyrics    = find_lyrics(track_id) if track_id
         Result.new(lyrics)
       end
 
       def search_track
         result = MusixMatch.search_track(:q => @q, :f_has_lyrics => 1)
         if result.status_code == 200 && lyrics = result.track_list.first
-          lyrics.lyrics_id
+          lyrics.track_id
         end
       end
 
-      def find_lyrics(lyrics_id)
-        result = MusixMatch.get_lyrics(lyrics_id)
+      def find_lyrics(track_id)
+        result = MusixMatch.get_lyrics(track_id)
         if result.status_code == 200 && lyrics = result.lyrics
           lyrics
         end

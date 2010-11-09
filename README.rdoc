@@ -41,7 +41,7 @@ Available options for the search_lyrics methods are:
     
 === Getting lyrics
 
-  response = MusixMatch.get_lyrics(lyrics_id)
+  response = MusixMatch.get_lyrics(track_id)
   if response.status_code == 200 && lyrics = response.lyrics
     puts lyrics.lyrics_body
   end
