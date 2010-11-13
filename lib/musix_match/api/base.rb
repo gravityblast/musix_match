@@ -1,6 +1,7 @@
 module MusixMatch
   module API
     class AuthenticationFailedException < Exception; end
+    class APILimiReachedException < Exception; end
     class APIKeyNotSpecifiedException < Exception; end
     
     class Base
@@ -31,7 +32,10 @@ module MusixMatch
         when String
           JSON.parse(response.parsed_response)
         end
-        raise AuthenticationFailedException.new('Authentication failed, probably because of a bad API key') if parsed_response['message']['header']['status_code'] == 401
+        case  parsed_response['message']['header']['status_code']
+          when 401 then raise AuthenticationFailedException.new('Authentication failed, probably because of a bad API key')
+          when 402 then raise APILimiReachedException.new('A limit was reached, either you exceeded per hour requests limits or your balance is insufficient')
+        end
         parsed_response
       end
     
