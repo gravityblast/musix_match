@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../lib/musix_match'
 
-Spec::Runner.configure do |config|
+RSpec.configure do |config|
   def load_fixture(name)
     File.open(File.dirname(__FILE__) + "/fixtures/#{name}.json") do |file|
       JSON.parse(file.read)
