@@ -57,6 +57,6 @@ describe MusixMatch::API::Base do
       HTTParty.should_receive(:get).with(url).and_return(response)
       result = MusixMatch::API::Base.get(method, params)
       result.should == parsed_response
-    end.should raise_error(MusixMatch::API::APILimiReachedException)
+    end.should raise_error(MusixMatch::API::APILimitReachedException)
   end
 end
