@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{musix_match}
-  s.version = "0.1.7"
+  s.version = "0.1.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
-  s.date = %q{2010-11-09}
+  s.date = %q{2010-11-17}
   s.description = %q{API wrapper for musixmatch.com API's}
   s.email = %q{andrea@gravityblast.com}
   s.extra_rdoc_files = [
