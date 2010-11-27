@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{musix_match}
-  s.version = "0.1.8"
+  s.version = "0.1.9"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andrea Franz"]
-  s.date = %q{2010-11-17}
+  s.date = %q{2010-11-27}
   s.description = %q{API wrapper for musixmatch.com API's}
   s.email = %q{andrea@gravityblast.com}
   s.extra_rdoc_files = [
@@ -22,9 +22,11 @@ Gem::Specification.new do |s|
      "Rakefile",
      "lib/musix_match.rb",
      "lib/musix_match/api/base.rb",
+     "lib/musix_match/api/feedback.rb",
      "lib/musix_match/api/finder.rb",
      "lib/musix_match/api/search.rb",
      "lib/musix_match/api/track_chart.rb",
+     "lib/musix_match/feedback_result.rb",
      "lib/musix_match/instant_lyrics.rb",
      "lib/musix_match/lyrics_find_result.rb",
      "lib/musix_match/lyrics_search_result.rb",
@@ -35,9 +37,11 @@ Gem::Specification.new do |s|
      "lib/musix_match/track_find_result.rb",
      "lib/musix_match/track_search_result.rb",
      "spec/api/base_spec.rb",
+     "spec/api/feedback_spec.rb",
      "spec/api/finder_spec.rb",
      "spec/api/search_spec.rb",
      "spec/api/track_chart_spec.rb",
+     "spec/feedback_result_spec.rb",
      "spec/lyrics_find_result_spec.rb",
      "spec/lyrics_search_result_spec.rb",
      "spec/models/lyrics_spec.rb",
@@ -54,9 +58,11 @@ Gem::Specification.new do |s|
   s.summary = %q{API wrapper for musixmatch.com API's}
   s.test_files = [
     "spec/api/base_spec.rb",
+     "spec/api/feedback_spec.rb",
      "spec/api/finder_spec.rb",
      "spec/api/search_spec.rb",
      "spec/api/track_chart_spec.rb",
+     "spec/feedback_result_spec.rb",
      "spec/lyrics_find_result_spec.rb",
      "spec/lyrics_search_result_spec.rb",
      "spec/models/lyrics_spec.rb",
