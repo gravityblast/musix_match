@@ -41,4 +41,12 @@ describe MusixMatch do
     MusixMatch::InstantLyrics::Search.should_receive(:search).with(q).and_return(result)
     MusixMatch.i_m_feeling_lucky(q)
   end
+  
+  it "should call post_feedback on Feedback" do
+    track_id = 1
+    lyrics_id = 1
+    feedback_type = 'wrong_attribution'
+    MusixMatch::API::Feedback.should_receive(:post_feedback).with(track_id, lyrics_id, feedback_type)
+    MusixMatch.post_feedback(track_id, lyrics_id, feedback_type)
+  end
 end
