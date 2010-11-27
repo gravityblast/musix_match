@@ -53,7 +53,7 @@ module MusixMatch
     result.found? ? result.lyrics.lyrics_body : 'Lyrics not found'
   end
   
-  def self.post_feedback(*args)
-    API::Feedback.post_feedback(*args)
+  def self.post_feedback(track_id, lyrics_id, feedback_type)
+    API::Feedback.post_feedback(track_id, lyrics_id, feedback_type)
   end
 end

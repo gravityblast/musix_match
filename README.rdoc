@@ -97,6 +97,18 @@ The track object has the following attributes:
 * artist_mbid
 * artist_name
 
+== Sending Feedback
+  
+  MusixMatch.post_feedback(track_id, lyrics_id, feedback_type)
+  
+Feedback type should be one of the following:
+
+* *wrong_attribution* (the lyrics shown are not by the artist that I selected.)
+* *bad_characters* (there are strange characters and/or words that are partially scrambled.)
+* *lines_too_long* (the text for each verse is too long!)
+* *wrong_verses* (there are some verses missing from the beginning or at the end.)
+* *wrong_formatting* (the text looks horrible, please fix it!)
+
 == Links
 
 * Repository: git://github.com/pilu/musix_match.git
