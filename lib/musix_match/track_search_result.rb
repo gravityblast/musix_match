@@ -1,8 +1,9 @@
 module MusixMatch
   class TrackSearchResult    
-    attr_reader :status_code, :execute_time, :available, :track_list
+    attr_reader :response, :status_code, :execute_time, :available, :track_list
     
     def initialize(response)
+      @response = response
       @track_list = []
       parse_response(response)
     end

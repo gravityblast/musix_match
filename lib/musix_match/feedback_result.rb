@@ -1,8 +1,9 @@
 module MusixMatch
   class FeedbackResult
-    attr_reader :status_code, :execute_time
+    attr_reader :response, :status_code, :execute_time
     
     def initialize(response)
+      @response = response
       parse_response(response)
     end      
   
