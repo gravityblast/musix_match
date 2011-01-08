@@ -27,7 +27,7 @@ module MusixMatch
         initialize_method = Proc.new do |*params|
           model_params = params.first || {}
           attributes.each do |attribute|
-            instance_variable_set("@#{attribute}", model_params.delete(attribute.to_s))
+            instance_variable_set("@#{attribute}", model_params[attribute.to_s])
           end
         end      
         base.send(:define_method, :initialize, &initialize_method)
