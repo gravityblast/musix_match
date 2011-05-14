@@ -65,6 +65,9 @@ The Lyrics object has the following attributes:
 
 * lyrics_id
 * lyrics_body
+* lyrics_language
+* script_tracking_url
+* lyrics_copyright
 * track_name
 * artist_name
 
@@ -74,11 +77,19 @@ The track object has the following attributes:
 
 * track_id
 * track_mbid
-* lyrics_id
 * track_name
+* track_mbid
+* track_length
+* lyrics_id
+* instrumental
+* subtitle_id
 * artist_id
 * artist_mbid
 * artist_name
+* artist_mbid
+* album_name
+* album_id
+* album_coverart_100x100
 
 == Sending Feedback
   
