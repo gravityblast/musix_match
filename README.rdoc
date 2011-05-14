@@ -22,30 +22,6 @@
     
   MusixMatch::API::Base.api_key = 'YOUR_API_KEY'
 
-=== Lyrics search
-
-  response = MusixMatch.search_lyrics(:q_artist => 'Pantera')
-  if response.status_code == 200
-    response.each do |lyrics|
-      puts "#{lyrics.lyrics_id}: #{lyrics.track_name} (#{lyrics.artist_name})"
-    end
-  end
-    
-Available options for the search_lyrics methods are:
-
-* q: string to be searched in every data field
-* q_track: string to be searched among tracks titles
-* q_artist: string to be searched among artists names
-* page: requested page of results
-* page_size: desired number of items per result page
-    
-=== Getting lyrics
-
-  response = MusixMatch.get_lyrics(track_id)
-  if response.status_code == 200 && lyrics = response.lyrics
-    puts lyrics.lyrics_body
-  end
-
 === Track search
 
   response = MusixMatch.search_track(:q_artist => 'Pantera')
@@ -54,7 +30,7 @@ Available options for the search_lyrics methods are:
       puts "#{track.track_id}: #{track.track_name} (#{track.artist_name})"
     end
   end
-  
+
 Available options for the search_track methods are:
 
 * q: a string that will be searched in every data field
@@ -63,6 +39,13 @@ Available options for the search_track methods are:
 * page: requested page of results
 * page_size: desired number of items per result page
 * f_has_lyrics: exclude tracks without an available lyrics
+    
+=== Getting lyrics
+
+  response = MusixMatch.get_lyrics(track_id)
+  if response.status_code == 200 && lyrics = response.lyrics
+    puts lyrics.lyrics_body
+  end
     
 === Getting track
 

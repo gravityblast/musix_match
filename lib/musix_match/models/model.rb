@@ -1,5 +1,5 @@
 module MusixMatch
-  module Models    
+  module Models   
     module Model
       def self.included(base)
         base.send(:extend, ClassMethods)
@@ -10,15 +10,23 @@ module MusixMatch
         def model_with_attributes(*attributes)
           attr_accessor(*attributes)
           ModelBuilder.build_constructor(self, *attributes)
-        end
-        
-        def search(options={})
-          API::Search.send("search_#{self.name.split('::').last.downcase}", options)
-        end
+        end    
         
         def get(item_id)
           API::Finder.send("find_#{self.name.split('::').last.downcase}", item_id)
         end                
+      end
+    end
+    
+    module Searcher
+      def self.included(base)
+        base.send(:extend, ClassMethods)
+      end
+
+      module ClassMethods
+        def search(options={})
+          API::Search.send("search_#{self.name.split('::').last.downcase}", options)
+        end
       end
     end
     
