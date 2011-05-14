@@ -16,11 +16,15 @@ module MusixMatch
       end
     
       def self.url_for(method, params={})
+        URI.escape("#{API_URL}/#{url_path_for(method, params)}")
+      end
+      
+      def self.url_path_for(method, params={})
         params.delete('format')
         params.delete('apikey')
         params.merge!({ :apikey => api_key, :format => 'json' })
         url_params = params.collect{|k, v| "#{k}=#{v}"}.join('&')
-        URI.escape("#{API_URL}/#{method}?#{url_params}")
+        "#{method}?#{url_params}"
       end
 
       def self.get(method, params={})
