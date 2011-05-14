@@ -25,7 +25,7 @@ module MusixMatch
 
       def self.get(method, params={})
         raise APIKeyNotSpecifiedException.new('You must specify the API key. MusixMatch::API::Base.api_key = "YOUR_API_KEY"') if api_key.nil?
-        response = HTTParty.get(url_for(method, params))
+        response = perform_get_request(url_for(method, params))
         parsed_response = case response.parsed_response
         when Hash
           response.parsed_response
@@ -37,6 +37,10 @@ module MusixMatch
           when 402 then raise APILimitReachedException.new('A limit was reached, either you exceeded per hour requests limits or your balance is insufficient')
         end
         parsed_response
+      end
+      
+      def self.perform_get_request(url)
+        HTTParty.get(url)
       end
     
       def api_key    
